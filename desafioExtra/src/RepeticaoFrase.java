@@ -1,5 +1,3 @@
-//Em andamento
-
 import java.util.Enumeration;
 import java.util.Scanner;
 
@@ -12,6 +10,12 @@ public class RepeticaoFrase {
 
         System.out.println(" Digite a quantidade de vezes que a frase irá se repetir : ");
         int numeroRepeticao = scanner.nextInt();
+        int contador = 0;
 
+        while (contador < numeroRepeticao){
+            System.out.println(frase);
+            contador++;
+
+        }
     }
 }
