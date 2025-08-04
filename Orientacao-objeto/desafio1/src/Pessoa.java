@@ -1,6 +1,5 @@
-
 public class Pessoa {
-    void mensage(){
-        System.out.println("Olá, mundo");
+    void olaMundo(){
+        System.out.printf("Olá, mundo \n");
     }
 }
