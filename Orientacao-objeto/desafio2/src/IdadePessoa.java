@@ -16,7 +16,7 @@ public class IdadePessoa {
     }
 
     public void setIdade(int idade){
-        this.nome = nome;
+        this.idade = idade;
     }
 
     public void verificarIdade(){
