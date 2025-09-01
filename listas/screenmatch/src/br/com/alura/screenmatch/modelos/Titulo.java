@@ -10,6 +10,11 @@ public class Titulo {
     private double avaliacao;
     private int totalAvaliacao;
 
+    public Titulo(String nome, int anoLancamento) {
+        this.nome = nome;
+        this.anoLancamento = anoLancamento;
+    }
+
     public int getTotalAvaliacao(){
         return totalAvaliacao;
     }

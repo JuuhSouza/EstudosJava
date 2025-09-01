@@ -23,4 +23,8 @@ public class Filme extends Titulo implements Classificavel {
         return "Filme: " + this.getNome();
     }
 
+    public Filme(String nome, int anoLancamento) {
+        super(nome, anoLancamento);
+    }
+
 }

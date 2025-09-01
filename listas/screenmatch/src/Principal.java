@@ -10,12 +10,12 @@ import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
-        Filme meuFilme = new Filme();
+        Filme meuFilme = new Filme("Wall-e", 2008);
 
         //nova maneira de escrever o codigo
 
-        meuFilme.setNome("Wall-e");
-        meuFilme.setAnoLancamento(2008);
+//        meuFilme.setNome("Wall-e");
+//        meuFilme.setAnoLancamento(2008);
         meuFilme.setDuracaoMinutos(180);
 
         meuFilme.fichaTecnica();
@@ -48,18 +48,18 @@ public class Principal {
         //meuFilme2.totalAvaliacao =1;
         //System.out.println(meuFilme2.mediaAvaliacao());
 
-        Serie the100 = new Serie();
-        the100.setNome("The 100");
-        the100.setAnoLancamento(2015);
+        Serie the100 = new Serie("The 100", 2015);
+//        the100.setNome("The 100");
+//        the100.setAnoLancamento(2015);
         the100.setEpisodiosTemporadas(10);
         the100.setTemporadas(7);
         the100.setMinutosPorEpisodio(42);
         the100.fichaTecnica();
         System.out.println("Duração para maratonar the 100 : " + the100.getDuracaoMinutos());
 
-        Filme outroFilme = new Filme();
-        outroFilme.setNome("Avatar");
-        outroFilme.setAnoLancamento(2023);
+        Filme outroFilme = new Filme("Avatar", 2023);
+//        outroFilme.setNome("Avatar");
+//        outroFilme.setAnoLancamento(2023);
         outroFilme.setDuracaoMinutos(200);
 
         CalculadoraTempo calculadora = new CalculadoraTempo();
@@ -77,8 +77,8 @@ public class Principal {
         episodios.setTotalVisualizacoes(400);
         filtro.filtro(episodios);
 
-        Filme filmeDaJulia = new Filme();
-        filmeDaJulia.setNome("Os pecadores");
+        Filme filmeDaJulia = new Filme("Os pecadores",2025);
+//        filmeDaJulia.setNome("Os pecadores");
         filmeDaJulia.setAnoLancamento(2025);
         filmeDaJulia.setDuracaoMinutos(200);
         filmeDaJulia.avalia(8);
@@ -86,9 +86,12 @@ public class Principal {
         ArrayList<Filme> listaDeFilme = new ArrayList<>();
         listaDeFilme.add(filmeDaJulia);
         listaDeFilme.add(meuFilme);
-        System.out.println("Tamanho da lista " + listaDeFilme.size()); //size -> quantos elementos adicionados
+        System.out.println("Tamanho da lista " + listaDeFilme.size()); //size -> quantos elementos adicionados na lista
         System.out.println("Primeiro filme " + listaDeFilme.get(0).getNome());
         System.out.println(listaDeFilme);
         System.out.println("ToString " + listaDeFilme.get(0).toString());
+
+
+
     }
 }
