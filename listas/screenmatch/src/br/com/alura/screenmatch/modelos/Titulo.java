@@ -1,6 +1,6 @@
 package br.com.alura.screenmatch.modelos;
 
-public class Titulo {
+public class Titulo implements Comparable<Titulo> {
     //Não iniciamos com o psvm e nem o sout.
 
     private String nome;
@@ -57,5 +57,10 @@ public class Titulo {
 
     public double mediaAvaliacao(){
         return avaliacao / totalAvaliacao;
+    }
+
+    @Override
+    public int compareTo(Titulo outroTitulo) {
+        return this.getNome().compareTo(outroTitulo.getNome());
     }
 }

@@ -4,6 +4,8 @@ import br.com.alura.screenmatch.modelos.Serie;
 import br.com.alura.screenmatch.modelos.Titulo;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 public class PrincipalComListas {
     public static void main(String[] args) {
@@ -20,6 +22,7 @@ public class PrincipalComListas {
         lista.add(filmeDaJulia);
         lista.add(meuFilme);
         lista.add(the100);
+        lista.add(outroFilme);
 
         for (Titulo item : lista){// intera a lista de um jeito mais simples
             System.out.println(item.getNome());
@@ -27,5 +30,17 @@ public class PrincipalComListas {
                 System.out.println("Classficação: " + filme.getClassificacao());
             }
         }
+
+        ArrayList<String> buscPorAttistas = new ArrayList<>();
+        buscPorAttistas.add("Sandra Bullock");
+        buscPorAttistas.add("Rihanna");
+        buscPorAttistas.add("Hayley Stanyfield");
+        System.out.println(buscPorAttistas);
+
+        Collections.sort(buscPorAttistas);
+        System.out.println("Em ordem " + buscPorAttistas);
+
+        Collections.sort(lista);
+        System.out.println("Lita de titulos ordenados " + lista);
     }
 }
