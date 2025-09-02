@@ -4,7 +4,7 @@ public class Produto {
     int quantidade;
 
     public String toString(){
-        return "Resumo do produto " + this.getNome();
+        return "Resumo do produto: " + this.getNome() + " R$ " + this.getPreco() + " Quantidade do produto: " + this.getQuantidade();
     }
 
     public static void main(String[] args) {
