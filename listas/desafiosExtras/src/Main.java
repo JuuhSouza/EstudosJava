@@ -39,12 +39,17 @@ public class Main {
 //            }
 //        }
 
-
       // Lista de alunos
+        ArrayList<Aluno> listaAlunos = new ArrayList<>();
+        Aluno aluno1 = new Aluno("Julia", 8.5);
+        Aluno aluno2 = new Aluno("Eduarda", 8);
+        Aluno aluno3 = new Aluno("Rodrigo", 8.2);
 
+        listaAlunos.add(aluno1);
+        listaAlunos.add(aluno2);
+        listaAlunos.add(aluno3);
 
-
-
+        
 
     }
 }
