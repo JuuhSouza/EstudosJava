@@ -6,50 +6,68 @@ public class Main {
     public static void main(String[] args) {
         
         //lista de Produtos
-        ArrayList<Produto> listaProdutos = new ArrayList<>();
+        ArrayList<Product> listOfProduct = new ArrayList<>();
 
-        Produto produto1 = new Produto("Caneta", 2.00);
-        Produto produto2 = new Produto("Lápis", 1.00);
-        Produto produto3 = new Produto("Borracha", 4.00);
+        Product produto1 = new Product("Caneta", 2.00);
+        Product produto2 = new Product("Lápis", 1.00);
+        Product produto3 = new Product("Borracha", 4.00);
 
-        listaProdutos.add(produto1);
-        listaProdutos.add(produto2);
-        listaProdutos.add(produto3);
+        listOfProduct.add(produto1);
+        listOfProduct.add(produto2);
+        listOfProduct.add(produto3);
 
-        System.out.println("Temos o total de : " + listaProdutos.size() + " produtos");
-        System.out.println("E o produto mais caro é " + listaProdutos.get(2).nome);
+        System.out.println("Temos o total de : " + listOfProduct.size() + " produtos");
+
+        Product moreExpensive = listOfProduct.get(0);
+
+        for (Product produto : listOfProduct){
+            if (produto.price > moreExpensive.price){
+                moreExpensive = produto;
+            }
+        }
+        System.out.println("E o produto mais caro é " + moreExpensive.name);
 
         //Lista de livros
-        ArrayList<Livro> listaDeLivros = new ArrayList<>();
-        Livro livro1 = new Livro("Lady Killers", "tori Telfer", 2017);
-        Livro livro2 = new Livro("Diario de um banana", "Jeff Kinney", 2007);
-        Livro livro3 = new Livro("DemonSlayer", "Koyoharu", 2016);
+        ArrayList<Book> listOfBooks = new ArrayList<>();
+        Book book1 = new Book("Lady Killers", "tori Telfer", 2017);
+        Book book2 = new Book("Diario de um banana", "Jeff Kinney", 2007);
+        Book book3 = new Book("DemonSlayer", "Koyoharu", 2016);
 
+        listOfBooks.add(book1);
+        listOfBooks.add(book2);
+        listOfBooks.add(book3);
 
-        listaDeLivros.add(livro1);
-        listaDeLivros.add(livro2);
-        listaDeLivros.add(livro3);
+        System.out.println("Indicações de livros " + listOfBooks.toString());
 
-        System.out.println("Indicações de livros " + listaDeLivros.toString());
-        System.out.println("Os lançamentos depois de 2010 são: " + listaDeLivros.get(2).titulo + " e " + listaDeLivros.get(0).titulo);
-
-//        for (Livro livros : listaDeLivros){
-//            if (listaDeLivros => 2010){
-//                System.out.println(listaDeLivros);
-//            }
-//        }
+        System.out.println("OS livros lançados depois de 2010 são: ");
+        for (Book books : listOfBooks){
+            if (books.releaseYear > 2010){
+                System.out.println(" - " + books);
+            }
+        }
 
       // Lista de alunos
-        ArrayList<Aluno> listaAlunos = new ArrayList<>();
-        Aluno aluno1 = new Aluno("Julia", 8.5);
-        Aluno aluno2 = new Aluno("Eduarda", 8);
-        Aluno aluno3 = new Aluno("Rodrigo", 8.2);
+        ArrayList<Student> listOfStudents = new ArrayList<>();
+        Student student1 = new Student("Julia", 6.5);
+        Student student2 = new Student("Eduarda", 8);
+        Student student3 = new Student("Rodrigo", 4);
 
-        listaAlunos.add(aluno1);
-        listaAlunos.add(aluno2);
-        listaAlunos.add(aluno3);
+        listOfStudents.add(student1);
+        listOfStudents.add(student2);
+        listOfStudents.add(student3);
 
-        
+        for (Student studentsNotes : listOfStudents){
+            return (student1 + student2 + student3) / 3;
+        }
+
+        System.out.println("Alunos que precisarão fazer a recuperação são: ");
+        for (Student students : listOfStudents){
+            if (students.notice < 7){
+                System.out.println("- " + students.toString());
+            }
+        }
+
+
 
     }
 }
