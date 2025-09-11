@@ -7,8 +7,8 @@ public class Student {
         this.notice = notice;
     }
 
-    public void averageGrades(){
-        return (notice + notice) / 3;
+    public double getNotice(){
+        return notice / 3;
     }
 
     public String toString(){
