@@ -1,66 +1,65 @@
 package br.com.alura.screenmatch.modelos;
 
-public class Titulo implements Comparable<Titulo> {
-    //Não iniciamos com o psvm e nem o sout.
-
+public class Titulo {
     private String nome;
-    private int anoLancamento;
-    private boolean inlcuidoPlano;
-    private int duracaoMinutos;
-    private double avaliacao;
-    private int totalAvaliacao;
+    private int anoDeLancamento;
+    private boolean incluidoNoPlano;
+    private double somaDasAvaliacoes;
+    private int totalDeAvaliacoes;
+    private int duracaoEmMinutos;
 
-    public Titulo(String nome, int anoLancamento) {
+    public Titulo(String nome, int anoDeLancamento) {
         this.nome = nome;
-        this.anoLancamento = anoLancamento;
-    }
-
-    public int getTotalAvaliacao(){
-        return totalAvaliacao;
-    }
-
-    //nova maneira de escrever o codigo, utilizamos o atalho alt + Insert, para abrir uma janela de opçoes para escolher. o setters ou getters
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public void setInlcuidoPlano(boolean inlcuidoPlano) {
-        this.inlcuidoPlano = inlcuidoPlano;
-    }
-
-    public void setAnoLancamento(int anoLancamento) {
-        this.anoLancamento = anoLancamento;
-    }
-
-    public void setDuracaoMinutos(int duracaoMinutos) {
-        this.duracaoMinutos = duracaoMinutos;
-    }
-
-    public int getDuracaoMinutos() {
-        return duracaoMinutos;
+        this.anoDeLancamento = anoDeLancamento;
     }
 
     public String getNome() {
         return nome;
     }
 
-    public void fichaTecnica(){
-        System.out.println("Nome da série: " + nome);
-        System.out.println("Ano de lançamento: " + anoLancamento);
+    public int getAnoDeLancamento() {
+        return anoDeLancamento;
+    }
+
+    public boolean isIncluidoNoPlano() {
+        return incluidoNoPlano;
+    }
+
+    public int getDuracaoEmMinutos() {
+        return duracaoEmMinutos;
+    }
+
+    public int getTotalDeAvaliacoes() {
+        return totalDeAvaliacoes;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setAnoDeLancamento(int anoDeLancamento) {
+        this.anoDeLancamento = anoDeLancamento;
+    }
+
+    public void setIncluidoNoPlano(boolean incluidoNoPlano) {
+        this.incluidoNoPlano = incluidoNoPlano;
+    }
+
+    public void setDuracaoEmMinutos(int duracaoEmMinutos) {
+        this.duracaoEmMinutos = duracaoEmMinutos;
+    }
+
+    public void exibeFichaTecnica(){
+        System.out.println("Nome do filme: " + nome);
+        System.out.println("Ano de lançamento: " + anoDeLancamento);
     }
 
     public void avalia(double nota){
-        avaliacao += nota;
-        totalAvaliacao++;
+        somaDasAvaliacoes += nota;
+        totalDeAvaliacoes++;
     }
 
-    public double mediaAvaliacao(){
-        return avaliacao / totalAvaliacao;
-    }
-
-    @Override
-    public int compareTo(Titulo outroTitulo) {
-        return this.getNome().compareTo(outroTitulo.getNome());
+    public double pegaMedia(){
+        return somaDasAvaliacoes / totalDeAvaliacoes;
     }
 }
