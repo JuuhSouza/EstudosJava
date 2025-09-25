@@ -15,7 +15,7 @@ public class Livros {
         System.out.println("Digite o titúlo de um livro para a busca: ");
         String leitura = livro.nextLine();
 
-        String busca = "https://www.googleapis.com/books/v1/volumes?q=" + leitura + "&apikey=6faf77b1";
+        String busca = "https://www.googleapis.com/books/v1/volumes?q=" + leitura;
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(busca))
