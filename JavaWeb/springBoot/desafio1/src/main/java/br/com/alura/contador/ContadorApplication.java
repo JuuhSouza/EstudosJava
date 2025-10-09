@@ -1,5 +1,6 @@
 package br.com.alura.contador;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,26 +16,16 @@ public abstract class ContadorApplication implements CommandLineRunner{
         SpringApplication.run(ContadorApplication.class, args);
 	}
 
+    //1- Contador
     @Override
     public void run(String... args) throws Exception{
-        Tarefa tarefa = new Tarefa("Aula 1",false,"Júlia");
-        
-    }
-
-
-
-/*
-    @Override
-    public void contador(String... args) throws Exception{
             Scanner scanner = new Scanner(System.in);
             System.out.println("Digite um numero para começar a contagem:");
             int numero = scanner.nextInt();
 
-            System.out.println(numero);
-
             for (int i = 0; i <= numero; i++) {
                 System.out.println(i + " ");
             }
-        }*/
+        }
 
 }
